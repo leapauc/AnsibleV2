@@ -1,4 +1,5 @@
 ---
 # tasks file for last_config
+- import_tasks: check_db_web_connexion.yml
 - import_tasks: pare_feu.yml
 - import_tasks: config_php.yml

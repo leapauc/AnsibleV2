@@ -21,6 +21,13 @@
   vars_files: 
     - vault.yml
   roles:
-    - geerlingguy.mysql
+    #- geerlingguy.mysql
     - install_config_mysql
+- name: Last config
+  hosts: web
+  become: yes
+  vars_files: 
+    - vault.yml
+  roles:
+    - last_config
 

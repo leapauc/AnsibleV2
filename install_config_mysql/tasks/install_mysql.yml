@@ -1,3 +1,4 @@
-roles: 
-  - role:  geelingguy.mysql
-  
+- name: Install MySQL
+  apt:
+    name: mysql-client-core-8.0
+    state: present

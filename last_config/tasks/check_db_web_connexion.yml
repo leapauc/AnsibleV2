@@ -1,0 +1,5 @@
+- name: Vérifier la connexion entre le serveur web et la base de données
+  wait_for:
+    host: "{{ ansible_host }}"
+    port: 3306
+    timeout: 10
