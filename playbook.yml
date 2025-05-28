@@ -21,5 +21,6 @@
   vars_files: 
     - vault.yml
   roles:
+    - geerlingguy.mysql
     - install_config_mysql
 

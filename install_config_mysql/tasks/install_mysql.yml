@@ -1,4 +1,3 @@
-- name: Installer MySQL
-  apt:
-    name: mysql-server
-    state: present
+roles: 
+  - role:  geelingguy.mysql
+  
