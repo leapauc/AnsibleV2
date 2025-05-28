@@ -1,0 +1,6 @@
+- name: Clone Moodle repository with specific branch
+  git:
+    repo: "{{ moodle_repo_url }}"
+    dest: "{{ moodle_dest }}"
+    version: "{{ moodle_branch }}"
+    force: yes

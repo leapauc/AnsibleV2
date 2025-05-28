@@ -1,0 +1,6 @@
+- name: Créer l'utilisateur Moodle
+  mysql_user:
+    name: "{{ moodle_user }}"
+    password: "{{ moodle_user_password }}"
+    priv: "{{ moodle_db }}.*:ALL"
+    state: present

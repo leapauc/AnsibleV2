@@ -1,0 +1,14 @@
+---
+# tasks file for preparation
+- name: Préparation des machines
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Installer les outils de base
+  apt:
+    name:
+      - curl
+      - git
+      - unzip
+    state: present

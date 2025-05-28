@@ -1,0 +1,4 @@
+---
+# tasks file for install_apache2
+- import_tasks: install_apache2.yml
+- import_tasks: config_apache2.yml

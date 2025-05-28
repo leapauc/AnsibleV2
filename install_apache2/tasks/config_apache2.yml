@@ -1,0 +1,4 @@
+- name: Configure Apache2
+  copy:
+    src: "templates/apache2.conf"
+    dest: "/etc/apache2/apache2.conf"

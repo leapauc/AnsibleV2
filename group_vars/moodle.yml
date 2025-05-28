@@ -1,0 +1,3 @@
+moodle_repo_url: "https://github.com/moodle/moodle.git"
+moodle_branch: "MOODLE_500_STABLE"
+moodle_dest: "/var/www/html/moodle"

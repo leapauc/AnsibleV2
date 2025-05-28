@@ -1,0 +1,5 @@
+- name: Créer le répertoire moodledata
+  file:
+    path: /var/moodledata
+    state: directory
+    mode: '0770'

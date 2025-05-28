@@ -1,0 +1,10 @@
+---
+# tasks file for install_php
+- name: Installer PHP et les extensions nécessaires
+  apt:
+    name:
+      - php
+      - php-mysql
+      - php-xml
+      - php-intl
+    state: present

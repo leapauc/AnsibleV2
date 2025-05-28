@@ -1,0 +1,4 @@
+- name: Ouvrir les ports nécessaires sur le pare-feu
+  ufw:
+    rule: allow
+    name: 'Apache Full'

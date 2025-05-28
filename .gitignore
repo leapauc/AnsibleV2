@@ -1,0 +1,9 @@
+.ansible/
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.local/
+.profile
+.ssh/
+.viminfo

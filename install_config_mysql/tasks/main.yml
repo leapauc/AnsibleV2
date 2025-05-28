@@ -1,0 +1,6 @@
+---
+# tasks file for install_config_mysql
+- import_tasks: install_mysql.yml
+- import_tasks: secure_mysql.yml
+- import_tasks: create_db.yml
+- import_tasks: create_user.yml

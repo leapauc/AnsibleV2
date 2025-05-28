@@ -1,0 +1,4 @@
+- name: Installer Apache2
+  apt:
+    name: apache2
+    state: present

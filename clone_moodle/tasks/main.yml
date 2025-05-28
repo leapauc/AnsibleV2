@@ -1,0 +1,4 @@
+---
+# tasks file for clone_moodle
+- import_tasks: clone_gitrepo.yml
+- import_tasks: create_moodledata.yml

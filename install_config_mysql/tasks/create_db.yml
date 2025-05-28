@@ -1,0 +1,4 @@
+- name: Créer la base de données Moodle
+  mysql_db:
+    name: "{{ moodle_db }}"
+    state: present
