@@ -4,3 +4,6 @@
     dest: "{{ moodle_dest }}"
     version: "{{ moodle_branch }}"
     force: yes
+  when: not moodle_dir.stat.exists
+  notify:
+    - restart_apache2

@@ -2,27 +2,20 @@
   hosts: all
   become: yes
   roles:
-    #- preparation
+    - preparation
 - name: Configurer le server web
   hosts: web
   become: yes
   roles:
-    #- install_apache2
-    #- install_php
+    - install_apache2
+    - install_php
 - name: Clone repo moodle
   hosts: web
   vars_files: group_vars/moodle.yml
   become: yes
   roles:
-    #- clone_moodle
-- name: Déployer MySQL et configurer
-  hosts: db
-  become: yes
-  vars_files: 
-    - vault.yml
-  roles:
-    #- geerlingguy.mysql
-    - install_config_mysql
+    - clone_moodle
+- import_playbook: playbooks/install_mysql.yml
 - name: Last config
   hosts: web
   become: yes

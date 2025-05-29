@@ -1,10 +1,24 @@
 ---
 # tasks file for install_php
-- name: Installer PHP et les extensions nécessaires
+- name: Install PHP and required extensions
   apt:
     name:
       - php
-      - php-mysql
-      - php-xml
+      - php-cli
+      - php-curl
+      - php-gd
       - php-intl
+      - php-ldap
+      - php-mbstring
+      - php-mysql
+      - php-soap
+      - php-xml
+      - php-xmlrpc
+      - php-zip
+      - libapache2-mod-php
+      - php-common
+      - php-json
     state: present
+    update_cache: yes
+  notify:
+    - restart_apache2

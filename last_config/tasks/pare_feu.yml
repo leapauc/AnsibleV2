@@ -1,4 +1,6 @@
-- name: Ouvrir les ports nécessaires sur le pare-feu
+- name: Ouvrir les ports - pare feu
   ufw:
     rule: allow
-    name: 'Apache Full'
+    port: "{{ item }}"
+    proto: tcp
+  loop: "{{ ports }}"

@@ -1,2 +1,9 @@
 ---
 # defaults file for last_config
+moodle_data_dir: "/var/www/moodledata"
+# These variables will be replaced in the vault file
+moodle_host: "localhost"
+moodle_url: "http://localhost"
+ports:
+  - 80
+  - 443

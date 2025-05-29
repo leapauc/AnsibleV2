@@ -1,0 +1,8 @@
+- name: Set permissions on /var/www/html/moodle
+  file:
+    path: /var/www/html/moodle
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: '0770'
+    recurse: yes

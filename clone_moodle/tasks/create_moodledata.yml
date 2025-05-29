@@ -2,4 +2,6 @@
   file:
     path: /var/moodledata
     state: directory
-    mode: '0770'
+    owner: root
+    group: root
+    mode: '0755'

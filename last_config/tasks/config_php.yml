@@ -2,3 +2,8 @@
   template:
     src: config.php.j2
     dest: /var/www/html/moodle/config.php
+    owner: www-data
+    group: www-data
+    mode: '0644'
+  notify:
+    - restart_apache2

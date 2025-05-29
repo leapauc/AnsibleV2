@@ -1,5 +1,5 @@
 [web]
-192.168.56.2
+web ansible_host=192.168.56.2
 
 [db]
-192.168.56.3
+db ansible_host=192.168.56.3

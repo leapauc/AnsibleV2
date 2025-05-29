@@ -1,2 +1,6 @@
 ---
 # handlers file for clone_moodle
+- name: restart_apache2
+  service:
+    name: apache2
+    state: restarted

@@ -1,2 +1,7 @@
 ---
 # vars file for last_config
+moodle_db_host: "{{ moodle_host }}"
+moodle_db_name: "{{ moodle_name }}"
+moodle_db_user: "{{ moodle_user }}"
+moodle_db_password: "{{ moodle_user_password }}"
+moodle_url: "{{ moodle_url }}"

@@ -1,0 +1,22 @@
+<?php
+$CFG = new stdClass();
+
+$CFG->dbtype    = 'mysqli';
+$CFG->dblibrary = 'native';
+$CFG->dbhost    = '{{ moodle_db_host }}';
+$CFG->dbname    = '{{ moodle_name }}';
+$CFG->dbuser    = '{{ moodle_user }}';
+$CFG->dbpass    = '{{ moodle_user_password }}';
+$CFG->prefix    = 'mdl_';
+$CFG->dboptions = array(
+'dbpersist' => false,
+'dbsocket'  => false,
+'dbport'    => '',
+);
+
+$CFG->wwwroot   = '{{ moodle_url }}';
+$CFG->dataroot  = '{{ moodle_data_dir }}';
+$CFG->directorypermissions = 0777;
+$CFG->admin = 'admin';
+
+require_once(__DIR__ . '/lib/setup.php');
