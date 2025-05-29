@@ -1,4 +1,4 @@
-- name: Générer le fichier config.php
+- name: Create Moodle configuration file
   template:
     src: config.php.j2
     dest: /var/www/html/moodle/config.php

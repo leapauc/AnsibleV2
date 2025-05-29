@@ -1,6 +1,12 @@
 # Ansible-FinalProject
 Mettre en oeuvre un déploiement automatisé avec Ansible pour préparer l’installation de la plateforme d’elearning Moodle en configurant deux machines virtuelles distinctes
 
+## DEPENDANCES:
+- vagrant
+Il est à prévoir une installation de vagrant pour pouvoir faire l'ensemble de la routine de déploiement automatisé.
+https://developer.hashicorp.com/vagrant/install
+
+## ETAPES:
 1. Créer le fichier Vagrantfile
    Cf. fichier Vagrantfile
 
@@ -65,21 +71,29 @@ Mettre en oeuvre un déploiement automatisé avec Ansible pour préparer l’ins
    sudo pip install ansible
    ```
 
-8. Créer le fichier inventory.yml - fichier hosts sur le serveur
+8. Fichier hosts sur le serveur
 
-```
-[web]
-192.168.24.1
+   ```
+   [web]
+   web ansible_host=192.168.56.2
 
-[db]
-192.168.24.2
-```
+   [db]
+   db ansible_host=192.168.56.3
+   ```
 
-6. Playbook
+6. Rôles de Ansible Galaxy
    Lancer cette commande pour récuprer le role en ligne pour installation de mysql :
 
-```
-ansible-galaxy role install geerlingguy.mysql
+   ```
+   ansible-galaxy role install geerlingguy.mysql
 
-```
+   ```
+   Documentation disponible : https://galaxy.ansible.com/ui/standalone/roles/geerlingguy/mysql/ 
+
+7. Lancer le playbook de configuration global
+   lancer la commande suivante et en indiquant, sur la demande de la console, le mot de passe pour l'accès au vault
+   ```
+   ansible-playbook -i hosts playbook.yml --ask-vault-pass
+
+   ```
 

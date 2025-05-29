@@ -1,8 +1,13 @@
-- name: Clone Moodle repository with specific branch
+- name: Check if Moodle directory exists
+  stat:
+    path: /var/www/html/moodle
+  register: moodle_dir
+
+- name: Download Moodle from Git repository
   git:
-    repo: "{{ moodle_repo_url }}"
-    dest: "{{ moodle_dest }}"
-    version: "{{ moodle_branch }}"
+    repo: https://github.com/moodle/moodle.git
+    dest: "/var/www/html/moodle"
+    version: "{{ moodle_version }}"
     force: yes
   when: not moodle_dir.stat.exists
   notify:

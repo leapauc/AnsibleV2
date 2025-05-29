@@ -1,6 +1,6 @@
-- name: Créer le répertoire moodledata
+- name: Create moodledata directory
   file:
-    path: /var/moodledata
+    path: "{{ moodle_data_dir }}"
     state: directory
     owner: root
     group: root

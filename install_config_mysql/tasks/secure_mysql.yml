@@ -1,3 +1,0 @@
-- name: Sécuriser l'installation de MySQL
-  command: mysql_secure_installation --use-default
-  ignore_errors: yes
