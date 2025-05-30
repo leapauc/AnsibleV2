@@ -6,4 +6,4 @@ moodle_host: "localhost"
 moodle_url: "http://localhost"
 ports:
   - 80
-  - 443
+  - 8080
